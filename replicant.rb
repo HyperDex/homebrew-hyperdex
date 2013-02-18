@@ -17,8 +17,8 @@ class Replicant < Formula
 
   def install
     ENV.delete 'LD'
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.7"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.7"
     system "curl -O https://raw.github.com/rescrv/Replicant/master/memstream.h"
     system "autoreconf -if"
     system "./configure", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",

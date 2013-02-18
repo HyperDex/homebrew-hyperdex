@@ -14,8 +14,8 @@ class Leveldb < Formula
   end
 
   def install
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.7"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.7"
     system "make"
     system "make check"
     system "make leveldbutil"

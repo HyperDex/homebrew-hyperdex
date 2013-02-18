@@ -17,8 +17,8 @@ class Busybee < Formula
 
   def install
     ENV.delete 'LD'
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.7"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.7"
     libe = Formula.factory 'libe'
     libpo6 = Formula.factory 'libpo6'
     system "autoreconf -if"
@@ -30,10 +30,10 @@ class Busybee < Formula
 end
 __END__
 diff --git a/busybee.cc b/busybee.cc
-index ede42bf..3f83337 100644
+index ede42bf..94595be 100644
 --- a/busybee.cc
 +++ b/busybee.cc
-@@ -1712,12 +1712,18 @@ CLASSNAME :: wait_event(int* fd, uint32_t* events)
+@@ -1712,12 +1712,19 @@ CLASSNAME :: wait_event(int* fd, uint32_t* events)
  {
      struct kevent ee;
      struct timespec to = {0,0}; 
@@ -45,8 +45,10 @@ index ede42bf..3f83337 100644
 +        ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, NULL);
 +    }
      else
+-        to.tv_nsec = m_timeout * 1000;
 +    {
-         to.tv_nsec = m_timeout * 1000;
++        to.tv_sec = m_timeout / 1000;
++        to.tv_nsec = (m_timeout % 1000) * 1000000;
 +        ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, &to);
 +    }
  

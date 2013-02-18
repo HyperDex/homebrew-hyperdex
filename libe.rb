@@ -14,8 +14,8 @@ class Libe < Formula
 
   def install
     ENV.delete 'LD'
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.7"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.7"
     libpo6 = Formula.factory 'libpo6'
     system "autoreconf -if"
     system "./configure", "--prefix=#{prefix}","PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include",
