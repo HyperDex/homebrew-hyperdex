@@ -11,6 +11,10 @@ class Busybee < Formula
   depends_on 'automake'
   depends_on 'libe'
 
+  def patches
+    DATA
+  end
+
   def install
     ENV.delete 'LD'
     ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc"
@@ -24,3 +28,29 @@ class Busybee < Formula
     system "make install"
   end
 end
+__END__
+diff --git a/busybee.cc b/busybee.cc
+index ede42bf..3f83337 100644
+--- a/busybee.cc
++++ b/busybee.cc
+@@ -1712,12 +1712,18 @@ CLASSNAME :: wait_event(int* fd, uint32_t* events)
+ {
+     struct kevent ee;
+     struct timespec to = {0,0}; 
++    int ret;
++
+     if (m_timeout < 0) 
+-        to.tv_nsec = 50000;
++    {
++        ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, NULL);
++    }
+     else
++    {
+         to.tv_nsec = m_timeout * 1000;
++        ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, NULL);
++    }
+ 
+-    int ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, &to);
+     *fd = ee.ident;
+ 
+     switch(ee.filter)
