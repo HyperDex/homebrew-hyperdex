@@ -1,8 +1,7 @@
 Homebrew tap for HyperDex.
 
 ## Installation
-
-`brew install seanogden/hyperdex`
+`brew tap seanogden/hyperdex && brew install hyperdex`
 
 ## Caveats
 
