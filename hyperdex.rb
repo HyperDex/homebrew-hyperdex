@@ -6,8 +6,8 @@ class Hyperdex < Formula
   version '1.0.rc3'
   sha1 '523e496f5d563b2dcb1fbdb6fd3124c925334267'
 
-  depends_on 'replicant'
-  depends_on 'leveldb'
+  depends_on 'seanogden/hyperdex/replicant'
+  depends_on 'seanogden/hyperdex/leveldb'
   depends_on 'python'
   depends_on 'ruby'
 
