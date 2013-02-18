@@ -9,11 +9,11 @@ class Replicant < Formula
   depends_on 'autoconf-archive'
   depends_on 'libtool'
   depends_on 'automake'
-  depends_on 'seanogden/leveldb'
-  depends_on 'seanogden/cityhash'
+  depends_on 'leveldb'
+  depends_on 'cityhash'
   depends_on 'popt'
   depends_on 'glog'
-  depends_on 'seanogden/busybee'
+  depends_on 'busybee'
 
   def install
     ENV.delete 'LD'

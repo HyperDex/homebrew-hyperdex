@@ -5,7 +5,7 @@ class Libe < Formula
   url 'http://hyperdex.org/src/libe-0.3.1.tar.gz'
   sha1 '40754b1a9acdbd8154b5e4e348a74ff2550022bb'
 
-  depends_on 'seanogden/libpo6'
+  depends_on 'libpo6'
 
   def patches
     # fix up build error.
