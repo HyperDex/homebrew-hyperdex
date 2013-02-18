@@ -9,7 +9,7 @@ class Busybee < Formula
   depends_on 'autoconf-archive'
   depends_on 'libtool'
   depends_on 'automake'
-  depends_on 'seanogden/hyperdex/libe'
+  depends_on 'libe'
 
   def install
     ENV.delete 'LD'

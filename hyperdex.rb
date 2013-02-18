@@ -6,8 +6,8 @@ class Hyperdex < Formula
   version '1.0.rc3'
   sha1 '523e496f5d563b2dcb1fbdb6fd3124c925334267'
 
-  depends_on 'seanogden/hyperdex/replicant'
-  depends_on 'seanogden/hyperdex/leveldb'
+  depends_on 'replicant'
+  depends_on 'leveldb'
   depends_on 'python'
   depends_on 'ruby'
 
@@ -25,6 +25,7 @@ class Hyperdex < Formula
 #    libpo6 = Formula.factory 'libpo6'
 #    busybee = Formula.factory 'busybee'
 #    replicant = Formula.factory 'replicant'
+
     system "mkdir osx"
     system "curl -O https://raw.github.com/rescrv/HyperDex/master/osx/ieee754.h --output osx/ieee754.h"
     system "curl -O https://raw.github.com/rescrv/HyperDex/3cb4e2a038d963ca7352ce3498e046ee32604754/client/ruby/type_conversion.h"
