@@ -47,7 +47,7 @@ index ede42bf..3f83337 100644
      else
 +    {
          to.tv_nsec = m_timeout * 1000;
-+        ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, NULL);
++        ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, &to);
 +    }
  
 -    int ret = kevent(m_epoll.get(), NULL, 0, &ee, 1, &to);
