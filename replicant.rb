@@ -19,10 +19,6 @@ class Replicant < Formula
     ENV.delete 'LD'
     ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc"
     ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++"
-    leveldb = Formula.factory 'leveldb'
-    libe = Formula.factory 'libe'
-    libpo6 = Formula.factory 'libpo6'
-    busybee = Formula.factory 'busybee'
     system "curl -O https://raw.github.com/rescrv/Replicant/master/memstream.h"
     system "autoreconf -if"
     system "./configure", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
