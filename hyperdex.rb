@@ -19,12 +19,12 @@ class Hyperdex < Formula
     ENV.delete 'LD'
     ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc"
     ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++"
-    leveldb = Formula.factory 'leveldb'
-    cityhash = Formula.factory 'cityhash'
-    libe = Formula.factory 'libe'
-    libpo6 = Formula.factory 'libpo6'
-    busybee = Formula.factory 'busybee'
-    replicant = Formula.factory 'replicant'
+#    leveldb = Formula.factory 'leveldb'
+#    cityhash = Formula.factory 'cityhash'
+#    libe = Formula.factory 'libe'
+#    libpo6 = Formula.factory 'libpo6'
+#    busybee = Formula.factory 'busybee'
+#    replicant = Formula.factory 'replicant'
     system "mkdir osx"
     system "curl -O https://raw.github.com/rescrv/HyperDex/master/osx/ieee754.h --output osx/ieee754.h"
     system "curl -O https://raw.github.com/rescrv/HyperDex/3cb4e2a038d963ca7352ce3498e046ee32604754/client/ruby/type_conversion.h"
