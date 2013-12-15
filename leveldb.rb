@@ -5,7 +5,6 @@ class Leveldb < Formula
   url 'https://leveldb.googlecode.com/files/leveldb-1.9.0.tar.gz'
   sha1 '4d832277120912211998a2334fb975b995d51885'
 
-  depends_on 'homebrew/dupes/gcc' => :build
   depends_on 'snappy' => :build
 
   def patches
