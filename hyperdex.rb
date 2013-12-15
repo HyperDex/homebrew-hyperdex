@@ -2,9 +2,9 @@ require 'formula'
 
 class Hyperdex < Formula
   homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/hyperdex-1.0.rc3.tar.gz'
-  version '1.0.rc3'
-  sha1 '523e496f5d563b2dcb1fbdb6fd3124c925334267'
+  url 'http://hyperdex.org/src/hyperdex-#@version.tar.gz'
+  version '1.0.1'
+  sha1 'c8233c0de6b7b41d79f7c3d9a2633a5f754ec989'
 
   depends_on 'replicant'
   depends_on 'leveldb'
@@ -26,13 +26,9 @@ class Hyperdex < Formula
 #    busybee = Formula.factory 'busybee'
 #    replicant = Formula.factory 'replicant'
 
-    system "mkdir osx"
-    system "curl -O https://raw.github.com/rescrv/HyperDex/master/osx/ieee754.h --output osx/ieee754.h"
-    system "curl -O https://raw.github.com/rescrv/HyperDex/3cb4e2a038d963ca7352ce3498e046ee32604754/client/ruby/type_conversion.h"
-    system "mv type_conversion.h client/ruby/type_conversion.h"
     system "./configure", "--enable-python-bindings", "--enable-ruby-bindings", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
             "PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "E_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -le\"",
-            "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "BUSYBEE_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lbusybee\"",
+            "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "BUSYBEE_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lbusybee\"",
             "BUSYBEE_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "REPLICANT_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lreplicant\"",
             "REPLICANT_CFLAGS=-I#{HOMEBREW_PREFIX}/include"
             #, "CC=/usr/local/bin/gcc", "CXX=/usr/local/bin/g++"
