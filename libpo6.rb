@@ -12,8 +12,8 @@ class Libpo6 < Formula
   depends_on 'libtool'
 
   def install
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.7"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.7"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.8"
     system "autoreconf -if"
     system "./configure", "--prefix=#{prefix}"
     system "make install"
