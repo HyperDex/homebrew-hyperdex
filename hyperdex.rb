@@ -11,10 +11,6 @@ class Hyperdex < Formula
   depends_on 'python'
   depends_on 'ruby'
 
-  def patches
-      DATA
-  end
-
   def install
     ENV.delete 'LD'
     ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
