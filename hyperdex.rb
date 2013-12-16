@@ -28,7 +28,7 @@ class Hyperdex < Formula
 
     system "./configure", "--enable-python-bindings", "--enable-ruby-bindings", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
             "PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "E_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -le\"",
-            "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "BUSYBEE_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lbusybee\"",
+            "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "BUSYBEE_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lbusybee\"",
             "BUSYBEE_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "REPLICANT_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lreplicant\"",
             "REPLICANT_CFLAGS=-I#{HOMEBREW_PREFIX}/include"
             #, "CC=/usr/local/bin/gcc", "CXX=/usr/local/bin/g++"
