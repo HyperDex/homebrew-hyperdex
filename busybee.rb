@@ -11,14 +11,10 @@ class Busybee < Formula
   depends_on 'automake'
   depends_on 'libe'
 
-  def patches
-    DATA
-  end
-
   def install
     ENV.delete 'LD'
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.7"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.7"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.8"
     libe = Formula.factory 'libe'
     libpo6 = Formula.factory 'libpo6'
     system "autoreconf -if"
