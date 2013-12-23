@@ -17,8 +17,8 @@ class Replicant < Formula
 
   def install
     ENV.delete 'LD'
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.8"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.9"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.9"
     system "autoreconf -if"
     system "./configure", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
             "PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "E_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -le\"",

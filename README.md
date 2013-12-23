@@ -7,4 +7,4 @@ Homebrew tap for HyperDex.
 
 ## Caveats
 
-This will also install gcc 4.7.2, which takes a long time.
+This will also install gcc 4.9, which takes a long time.

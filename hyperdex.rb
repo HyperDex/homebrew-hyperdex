@@ -13,8 +13,8 @@ class Hyperdex < Formula
 
   def install
     ENV.delete 'LD'
-    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
-    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.8"
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.9"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.9"
 #    hyperleveldb = Formula.factory 'hyperleveldb'
 #    cityhash = Formula.factory 'cityhash'
 #    libe = Formula.factory 'libe'

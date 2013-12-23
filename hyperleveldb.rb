@@ -5,8 +5,7 @@ class Hyperleveldb < Formula
   url 'http://hyperdex.org/src/hyperleveldb-1.0.1.tar.gz'
   sha1 '12ba2b093a4a67f04edaaeaf3f1db7943d0a3147'
 
-  depends_on 'homebrew/versions/gcc48' => :build
-
+  depends_on 'homebrew/versions/gcc49' => :build
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
