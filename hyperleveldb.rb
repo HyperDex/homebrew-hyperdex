@@ -9,7 +9,7 @@ class Hyperleveldb < Formula
   depends_on 'homebrew/versions/gcc49' => :build
 
   def install
-    system "autoreconf -if"
+    system "autoreconf -i"
     system "./configure"
     system "make"
     system "make install"
