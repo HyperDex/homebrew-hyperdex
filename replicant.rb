@@ -24,7 +24,8 @@ class Replicant < Formula
     system "./configure", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
             "PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "E_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -le\"",
             "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "BUSYBEE_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lbusybee\"",
-            "BUSYBEE_CFLAGS=-I#{HOMEBREW_PREFIX}/include"
+            "BUSYBEE_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "HYPERLEVELDB_CFLAGS=-I#{HOMEBREW_PREFIX}/include",
+            "HYPERLEVELDB_LIBS=-L#{HOMEBREW_PREFIX}/lib"
     system "make install"
   end
 end
