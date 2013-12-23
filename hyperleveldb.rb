@@ -9,6 +9,8 @@ class Hyperleveldb < Formula
   depends_on 'homebrew/versions/gcc49' => :build
 
   def install
+    ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.9"
+    ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.9"
     system "./configure"
     system "make"
     system "make install"
