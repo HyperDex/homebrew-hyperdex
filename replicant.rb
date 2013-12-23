@@ -16,6 +16,7 @@ class Replicant < Formula
   depends_on 'busybee'
 
   def install
+    cxxstdlib_check :skip
     ENV.delete 'LD'
     ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.9"
     ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.9"

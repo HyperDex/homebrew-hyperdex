@@ -12,6 +12,7 @@ class Busybee < Formula
   depends_on 'libe'
 
   def install
+    cxxstdlib_check :skip
     ENV.delete 'LD'
     ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.9"
     ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.9"
