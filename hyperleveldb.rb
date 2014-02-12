@@ -8,7 +8,6 @@ class Hyperleveldb < Formula
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
-    system "make check"
     system "make install"
   end
 end
