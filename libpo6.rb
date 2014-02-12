@@ -5,8 +5,6 @@ class Libpo6 < Formula
   url 'http://hyperdex.org/src/libpo6-0.5.0.tar.gz'
   sha1 '782b53d60bd70b20ebe60980af9340af3dbb82b5'
 
-  keg_only "dependency of HyperDex"
-
   depends_on 'autoconf'
   depends_on 'automake'
   depends_on 'autoconf-archive'

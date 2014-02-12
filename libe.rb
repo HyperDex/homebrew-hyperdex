@@ -5,8 +5,6 @@ class Libe < Formula
   url 'http://hyperdex.org/src/libe-0.5.0.tar.gz'
   sha1 '77c4ffc7472795c63baac12b5488b95b993f8dfe'
 
-  keg_only "dependency of HyperDex"
-
   depends_on 'autoconf'
   depends_on 'automake'
   depends_on 'autoconf-archive'
