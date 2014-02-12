@@ -27,3 +27,17 @@ class Hyperdex < Formula
     system "make install"
   end
 end
+__END__
+diff --git a/cityhash/city.cc b/cityhash/city.cc
+index 49f299b..e09b659 100644
+--- a/cityhash/city.cc
++++ b/cityhash/city.cc
+@@ -499,7 +499,7 @@ uint128 CityHash128(const char *s, size_t len) {
+       CityHash128WithSeed(s, len, uint128(k0, k1));
+ }
+ 
+-#ifdef __SSE4_2__
++#if 0
+ #include <citycrc.h>
+ #include <nmmintrin.h>
+ 
