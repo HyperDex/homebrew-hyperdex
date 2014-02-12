@@ -9,6 +9,7 @@ class Busybee < Formula
   depends_on 'libe'
 
   def install
+    ENV['PKG_CONFIG_PATH']="#{HOMEBREW_PREFIX}/lib/pkgconfig"
     system "./configure", "--prefix=#{prefix}"
     system "make"
     system "make install"

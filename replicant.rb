@@ -14,6 +14,7 @@ class Replicant < Formula
   depends_on 'hyperleveldb'
 
   def install
+    ENV['PKG_CONFIG_PATH']="#{HOMEBREW_PREFIX}/lib/pkgconfig"
     system "./configure", "--prefix=#{prefix}"
     system "make"
     system "make install"
