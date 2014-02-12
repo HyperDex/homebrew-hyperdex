@@ -7,7 +7,7 @@ class Replicant < Formula
 
   depends_on 'popt'
   depends_on 'glog'
-  depends_on 'sparsehash'
+  depends_on 'google-sparsehash'
   depends_on 'libpo6'
   depends_on 'libe'
   depends_on 'busybee'
