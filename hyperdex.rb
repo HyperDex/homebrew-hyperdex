@@ -20,6 +20,10 @@ class Hyperdex < Formula
   depends_on 'hyperleveldb'
   depends_on 'replicant'
 
+  def patches
+    DATA
+  end
+
   def install
     ENV['PKG_CONFIG_PATH']="#{HOMEBREW_PREFIX}/lib/pkgconfig"
     system "./configure", "--prefix=#{prefix}"
