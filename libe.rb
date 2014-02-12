@@ -9,6 +9,7 @@ class Libe < Formula
   depends_on 'automake'
   depends_on 'autoconf-archive'
   depends_on 'libtool'
+  depends_on 'pkg-config'
 
   depends_on 'libpo6'
 
