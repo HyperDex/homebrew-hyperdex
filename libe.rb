@@ -8,7 +8,7 @@ class Libe < Formula
   depends_on 'libpo6'
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "PKG_CONFIG_PATH=#{prefix}/lib/pkgconfig", "./configure", "--prefix=#{prefix}"
     system "make"
     system "make install"
   end
