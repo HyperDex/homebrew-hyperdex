@@ -20,9 +20,6 @@ class Hyperdex < Formula
   depends_on 'hyperleveldb'
   depends_on 'replicant'
 
-  depends_on 'python'
-  depends_on 'ruby'
-
   def install
     ENV['PKG_CONFIG_PATH']="#{HOMEBREW_PREFIX}/lib/pkgconfig"
     system "./configure", "--prefix=#{prefix}"
