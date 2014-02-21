@@ -20,9 +20,9 @@ class Hyperdex < Formula
   depends_on 'hyperleveldb'
   depends_on 'replicant'
 
-  option 'with-python-bindings', "Builds and installs Python bindings"
-  option 'with-java-bindings', "Builds and installs Java bindings"
-  option 'with-ruby-bindings', "Builds and installs Java bindings"
+  option 'with-python-bindings', "Builds and installs Python client bindings"
+  option 'with-java-bindings', "Builds and installs Java client bindings"
+  option 'with-ruby-bindings', "Builds and installs Ruby client bindings"
 
   def patches
     DATA
