@@ -2,8 +2,8 @@ require 'formula'
 
 class Hyperdex < Formula
   homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/hyperdex-1.1.0.tar.gz'
-  sha1 'ebefa890c846053ba7f2e7897b8e023bc40955be'
+  url 'http://hyperdex.org/src/hyperdex-1.2.0.tar.gz'
+  sha1 '04e8227e295dd0650ecbe8722919a03b025e5585'
 
   depends_on 'autoconf'
   depends_on 'automake'
@@ -14,6 +14,7 @@ class Hyperdex < Formula
   depends_on 'popt'
   depends_on 'glog'
   depends_on 'google-sparsehash'
+  depends_on 'json-c'
   depends_on 'libpo6'
   depends_on 'libe'
   depends_on 'busybee'
