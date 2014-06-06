@@ -21,13 +21,23 @@ class Hyperdex < Formula
   depends_on 'hyperleveldb'
   depends_on 'replicant'
 
+  option 'enable-python-bindings', "Builds and installs Python client bindings"
+  option 'enable-java-bindings', "Builds and installs Java client bindings"
+  option 'enable-ruby-bindings', "Builds and installs Ruby client bindings"
+
   def patches
     DATA
   end
 
   def install
     ENV['PKG_CONFIG_PATH']="#{HOMEBREW_PREFIX}/lib/pkgconfig"
-    system "./configure", "--prefix=#{prefix}"
+
+    args = []
+    build.each do |opt|
+      args << opt.flag if build.include? opt.name
+    end
+
+    system "./configure", "--prefix=#{prefix}", *args
     system "make"
     system "make install"
   end
