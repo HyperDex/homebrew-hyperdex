@@ -6,7 +6,7 @@ Homebrew tap for HyperDex.
 `brew tap seanogden/hyperdex && brew install hyperdex`
 
 Optional client bindings can be individually selected with
-`brew install --with-java-bindings --with-python-bindings --with-ruby-bindings hyperdex`
+`brew install --enable-java-bindings --enable-python-bindings --enable-ruby-bindings hyperdex`
 
 ## Caveats
 
