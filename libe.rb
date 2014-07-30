@@ -2,8 +2,8 @@ require 'formula'
 
 class Libe < Formula
   homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/libe-0.7.0.tar.gz'
-  sha1 '8e2684b9fc78fc76b854ee66410ae113e584c95d'
+  url 'http://hyperdex.org/src/libe-0.8.0.tar.gz'
+  sha1 '0ea8b4d420b41570a84369b8db45fdf17dd6ca60'
 
   depends_on 'autoconf'
   depends_on 'automake'
