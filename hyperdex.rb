@@ -54,4 +54,17 @@ index 49f299b..e09b659 100644
 +#if 0
  #include <citycrc.h>
  #include <nmmintrin.h>
- 
+
+diff --git a/Makefile.am b/Makefile.am
+index ccc79bf..ff0fedf 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -289,7 +289,7 @@ hyperdex_daemon_LDADD += $(HYPERLEVELDB_LIBS)
+ hyperdex_daemon_LDADD += $(BUSYBEE_LIBS)
+ hyperdex_daemon_LDADD += $(E_LIBS)
+ hyperdex_daemon_LDADD += $(JSON_LIBS)
+-hyperdex_daemon_LDADD += -lpopt -lglog -lrt -lpthread
++hyperdex_daemon_LDADD += -lpopt -lglog -lpthread
+ man/hyperdex-daemon.1: man/hyperdex-daemon.1.h2m daemon/main.cc
+ 	@$(MAKE) --silent $(AM_MAKEFLAGS) hyperdex-daemon$(EXEEXT)
+ 	$(help2man_verbose)help2man $(HELP2MAN_FLAGS) --section 1 --output $@ --include $< ${abs_top_builddir}/hyperdex-daemon$(EXEEXT)
