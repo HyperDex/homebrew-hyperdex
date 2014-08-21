@@ -54,7 +54,6 @@ index 49f299b..e09b659 100644
 +#if 0
  #include <citycrc.h>
  #include <nmmintrin.h>
-
 diff --git a/Makefile.am b/Makefile.am
 index ccc79bf..ff0fedf 100644
 --- a/Makefile.am
@@ -68,3 +67,16 @@ index ccc79bf..ff0fedf 100644
  man/hyperdex-daemon.1: man/hyperdex-daemon.1.h2m daemon/main.cc
  	@$(MAKE) --silent $(AM_MAKEFLAGS) hyperdex-daemon$(EXEEXT)
  	$(help2man_verbose)help2man $(HELP2MAN_FLAGS) --section 1 --output $@ --include $< ${abs_top_builddir}/hyperdex-daemon$(EXEEXT)
+diff --git a/Makefile.in b/Makefile.in
+index 92ee361..d0fe419 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -1383,7 +1383,7 @@ hyperdex_daemon_SOURCES = common/attribute.cc \
+ 	daemon/state_transfer_manager_transfer_out_state.cc
+ hyperdex_daemon_CXXFLAGS = $(AM_CXXFLAGS) $(CXXFLAGS)
+ hyperdex_daemon_LDADD = $(REPLICANT_LIBS) $(HYPERLEVELDB_LIBS) \
+-	$(BUSYBEE_LIBS) $(E_LIBS) $(JSON_LIBS) -lpopt -lglog -lrt \
++	$(BUSYBEE_LIBS) $(E_LIBS) $(JSON_LIBS) -lpopt -lglog \
+ 	-lpthread
+ daemon_test_identifier_collector_SOURCES = daemon/test/identifier_collector.cc daemon/identifier_collector.cc $(th_sources)
+ daemon_test_identifier_collector_CXXFLAGS = $(AM_CXXFLAGS) $(CXXFLAGS)
