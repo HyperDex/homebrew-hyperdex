@@ -2,8 +2,8 @@ require 'formula'
 
 class Replicant < Formula
   homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/replicant-0.6.2.tar.gz'
-  sha1 '86c03a2b2a3d1e1900e54cdc62f0534ea4981004'
+  url 'http://hyperdex.org/src/replicant-0.6.3.tar.gz'
+  sha1 'e3677d6998623db3fdba4ac834eb69e8be6852c2'
 
   depends_on 'autoconf'
   depends_on 'automake'

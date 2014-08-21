@@ -2,8 +2,8 @@ require 'formula'
 
 class Hyperleveldb < Formula
   homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/hyperleveldb-1.2.0.tar.gz'
-  sha1 'e89cbae3b777c6fd67d5845c24322c916d40c0cf'
+  url 'http://hyperdex.org/src/hyperleveldb-1.2.1.tar.gz'
+  sha1 'fc43412dbc2cafc7cee8fd47b3e12a84c2833ec4'
 
   def install
     ENV['PKG_CONFIG_PATH']="#{HOMEBREW_PREFIX}/lib/pkgconfig"
