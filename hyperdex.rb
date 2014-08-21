@@ -54,6 +54,7 @@ index 49f299b..e09b659 100644
 +#if 0
  #include <citycrc.h>
  #include <nmmintrin.h>
+
 diff --git a/Makefile.am b/Makefile.am
 index ccc79bf..ff0fedf 100644
 --- a/Makefile.am
