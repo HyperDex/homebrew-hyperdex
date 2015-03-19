@@ -2,8 +2,8 @@ require 'formula'
 
 class Hyperdex < Formula
   homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/hyperdex-1.4.4.tar.gz'
-  sha1 'c5b126fc7862de66eab54fa5ef3c7cbb84b2bc9b'
+  url 'http://hyperdex.org/src/hyperdex-1.6.0.tar.gz'
+  sha1 'b019a2d1fc3e25a140b729d4392f7c07dd0cfcc2'
 
   depends_on 'autoconf'
   depends_on 'automake'
