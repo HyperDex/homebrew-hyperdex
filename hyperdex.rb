@@ -21,6 +21,7 @@ class Hyperdex < Formula
   depends_on 'hyperleveldb'
   depends_on 'replicant'
   depends_on 'libmacaroons'
+  depends_on 'libtreadstone'
 
   option 'with-python-bindings', "Builds and installs Python client bindings"
   option 'with-java-bindings', "Builds and installs Java client bindings"
