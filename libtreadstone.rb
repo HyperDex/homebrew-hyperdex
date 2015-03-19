@@ -13,6 +13,10 @@ class Libtreadstone < Formula
 
   depends_on 'libpo6'
 
+  def patches
+    DATA
+  end
+  
   def install
     ENV['PKG_CONFIG_PATH']="#{HOMEBREW_PREFIX}/lib/pkgconfig"
     system "./configure", "--prefix=#{prefix}"
@@ -20,3 +24,17 @@ class Libtreadstone < Formula
     system "make install"
   end
 end
+__END__
+diff --git a/treadstone.cc b/treadstone.cc
+index f4f651b..cf2b884 100644
+--- a/treadstone.cc
++++ b/treadstone.cc
+@@ -1805,7 +1805,7 @@ treadstone_transformer :: parse_array(const treadstone::pa
+     {
+         const unsigned char* const elem_start = tmp;
+         const unsigned char* elem_tmp = NULL;
+-        size_t elem_sz;
++        uint64_t elem_sz;
+
+         switch (*elem_start)
+         {
