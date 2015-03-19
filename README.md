@@ -9,7 +9,7 @@ Homebrew tap for HyperDex.
 Optional client bindings can be individually selected with
 `brew install --with-java-bindings --with-python-bindings --with-ruby-bindings hyperdex`
 
-## Using formula from this fork
+## Using formula from this fork (HyperDex 1.6.0)
 
 `brew tap dayasakti/hyperdex && brew install hyperdex.`
 
