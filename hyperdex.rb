@@ -20,6 +20,7 @@ class Hyperdex < Formula
   depends_on 'busybee'
   depends_on 'hyperleveldb'
   depends_on 'replicant'
+  depends_on 'libmacaroons'
 
   option 'with-python-bindings', "Builds and installs Python client bindings"
   option 'with-java-bindings', "Builds and installs Java client bindings"
