@@ -1,6 +1,6 @@
 require 'formula'
 
-class Replicant < Formula
+class Libmacaroons < Formula
   homepage 'http://hyperdex.org'
   url 'http://hyperdex.org/src/libmacaroons-0.2.0.tar.gz'
   sha1 'e8f3dfdb322febdeff03c0e71c3ed9518711f629'
