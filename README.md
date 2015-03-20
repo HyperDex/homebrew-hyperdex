@@ -11,7 +11,14 @@ Optional client bindings can be individually selected with
 
 ## Using formula from this fork (HyperDex 1.6.0)
 
-`brew tap dayasakti/hyperdex && brew install hyperdex.`
+```
+brew tap dayasakti/hyperdex
+brew install hyperdex
+```
+
+Optional client bindings can be individually selected with
+`brew install --with-java-bindings --with-python-bindings --with-ruby-bindings hyperdex`
+
 
 ## java binding hacks on macosx 10.7.5
 (only when you install JDK from oracle)
