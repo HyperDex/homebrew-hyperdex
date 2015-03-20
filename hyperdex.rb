@@ -26,6 +26,7 @@ class Hyperdex < Formula
   option 'with-python-bindings', "Builds and installs Python client bindings"
   option 'with-java-bindings', "Builds and installs Java client bindings"
   option 'with-ruby-bindings', "Builds and installs Ruby client bindings"
+  option 'with-enable-ycsb', "Enable the Yahoo Cloud Serving Benchmark"
 
   def patches
     DATA
@@ -37,6 +38,7 @@ class Hyperdex < Formula
     args << "--enable-java-bindings" if build.with? "java-bindings"
     args << "--enable-python-bindings" if build.with? "python-bindings"
     args << "--enable-ruby-bindings" if build.with? "ruby-bindings"
+    args << "--enable-ycsb" if build.with? "enable-ycsb"
     
     system "./configure", "--prefix=#{prefix}", *args
     system "make"
