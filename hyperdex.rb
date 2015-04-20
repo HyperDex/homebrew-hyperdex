@@ -2,8 +2,8 @@ require 'formula'
 
 class Hyperdex < Formula
   homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/hyperdex-1.4.4.tar.gz'
-  sha1 'c5b126fc7862de66eab54fa5ef3c7cbb84b2bc9b'
+  url 'http://hyperdex.org/src/hyperdex-1.6.0.tar.gz'
+  sha1 'b019a2d1fc3e25a140b729d4392f7c07dd0cfcc2'
 
   depends_on 'autoconf'
   depends_on 'automake'
@@ -20,10 +20,13 @@ class Hyperdex < Formula
   depends_on 'busybee'
   depends_on 'hyperleveldb'
   depends_on 'replicant'
+  depends_on 'libmacaroons'
+  depends_on 'libtreadstone'
 
   option 'with-python-bindings', "Builds and installs Python client bindings"
   option 'with-java-bindings', "Builds and installs Java client bindings"
   option 'with-ruby-bindings', "Builds and installs Ruby client bindings"
+  option 'with-enable-ycsb', "Enable the Yahoo Cloud Serving Benchmark"
 
   def patches
     DATA
@@ -35,6 +38,7 @@ class Hyperdex < Formula
     args << "--enable-java-bindings" if build.with? "java-bindings"
     args << "--enable-python-bindings" if build.with? "python-bindings"
     args << "--enable-ruby-bindings" if build.with? "ruby-bindings"
+    args << "--enable-ycsb" if build.with? "enable-ycsb"
     
     system "./configure", "--prefix=#{prefix}", *args
     system "make"
